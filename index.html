@@ -1,16 +1,13 @@
-<!-- TODO:
-    -- ADD SERVICES
-    -- SMOOTH SCROLL
-    -- LITTLE ENHANCEMENTS  -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title> C.L. | Portfolio</title>
+    <title>C.L. | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FIXED: Correct Font Awesome version -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Clash+Display:wght@400;500;600;700&family=Sentient:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,7 +18,6 @@
 
 <div id="loadingScreen" class="loading-screen">
     <div class="loader-content">
-        <!-- <div class="loader-name"> </div> -->
         <div class="loader-dots"><span></span><span></span><span></span></div>
     </div>
 </div>
@@ -29,6 +25,7 @@
 <div class="nav-buttons" id="navButtons">
     <div class="nav-btn" data-section="helloSection" data-tooltip="Home"><i class="fas fa-home"></i></div>
     <div class="nav-btn" data-section="aboutSection" data-tooltip="About"><i class="fas fa-user"></i></div>
+    <div class="nav-btn" data-section="servicesSection" data-tooltip="Services"><i class="fas fa-concierge-bell"></i></div>
     <div class="nav-btn" data-section="skillsSection" data-tooltip="Skills"><i class="fas fa-code"></i></div>
     <div class="nav-btn" data-section="projectsSection" data-tooltip="Projects"><i class="fas fa-rocket"></i></div>
     <div class="nav-btn" data-section="expSection" data-tooltip="Experience"><i class="fas fa-briefcase"></i></div>
@@ -39,13 +36,29 @@
 
 <div class="scroll-snap-container" id="snapContainer">
     <!-- HELLO WORLD -->
-    <section class="section-light" style="padding: 0;" >
-        <div class="hello-wrapper">
-            <div class="reveal" id="helloTrigger">
-                <div class="hello-text"> Hello World!</div>
-                <p style="margin-top: 1rem; font-size: 1.3rem; color: #2a4b7a; font-weight: 500;">I'm Carol — Tech Support & Junior Dev ready to solve problems.</p>
-                <div style="margin-top: 2rem;">
-                    <span style="background: #e0eaff; padding: 0.6rem 1.2rem; border-radius: 60px; font-weight: 500;"><i class="fas fa-arrow-down"></i> scroll down <i class="fas fa-arrow-down"></i></span>
+    <section class="hero-section" id="heroSection">
+        <div class="bg-shift"></div>
+        <div class="ring-container">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+        <div class="mouse-glow" id="mouseGlow"></div>
+        <div class="mouse-glow-secondary" id="mouseGlowSecondary"></div>
+        <div class="particle-field" id="particleField"></div>
+        <div class="flow-line" style="top: 20%; animation-delay: 0s;"></div>
+        <div class="flow-line" style="top: 45%; animation-delay: 2s; height: 1px;"></div>
+        <div class="flow-line" style="top: 65%; animation-delay: 4s;"></div>
+        <div class="flow-line" style="top: 80%; animation-delay: 1s; height: 1px;"></div>
+        <div class="pulse-overlay" id="pulseOverlay"></div>
+        <div class="content-wrapper">
+            <div>
+                <div class="hello-text">HELLO WORLD!</div>
+                <p>Welcome to my Portfolio.</p>
+                <div class="scroll-indicator">
+                    <i class="fas fa-arrow-down"></i> scroll down<i class="fas fa-arrow-down"></i>
                 </div>
             </div>
         </div>
@@ -57,9 +70,9 @@
             <div class="hero-badge"> Tech Enthusiast </div> 
             <div class="hero-badge"> Problem Solver </div> 
             <div class="hero-badge"> Passionate Learner </div>
-            <h1>Carolina Lee V. De Vicente.</h1>
+            <h1>Carolina Lee V. De Vicente</h1>
             <p class="subhead" style="margin: 0.8rem 0 1rem;">IT Support Specialist | Junior Developer</p>
-            <p style="font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> Binangonan, Rizal || <i class="fas fa-envelope"></i> dvcarolinalee@gmail.com </p>
+            <p style="font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> Binangonan, Rizal, Philippines || <i class="fas fa-envelope"></i> dvcarolinalee@gmail.com </p>
             <div class="btn-group">
                 <a href="#contactSection" class="btn-primary">Contact Me</a>
                 <a href="#projectsSection" class="btn-outline">View Projects</a>
@@ -74,155 +87,427 @@
             <h2>About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    Howdy everyone, I’m an IT graduate, technology enthusiast, and creative problem solver based in Rizal. 
+                    Howdy everyone, I'm an IT graduate, technology enthusiast, and creative problem solver based in Rizal. 
                     I specialize in IT support and junior development, turning technical challenges into practical solutions. 
                     Beyond tech, I explore creativity through photography and continuous learning, 
                     always aiming to grow as both a professional and an individual.
                 </div>
                 <div class="about-image">
                     <div class="about-img-placeholder">
-                        <img src="imgs/images.jpg" alt="Profile">
+                        <div class="image-wrapper">
+                            <img class="profile-img img-default" src="imgs/prof1.JPG" alt="Profile">
+                            <img class="profile-img img-hover" src="imgs/prof2.JPG" alt="Alternative">
+                        </div>
                     </div>
                 </div>
             </div>
             <div style="margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap;">
-                <div><strong>🎓 Cum Laude</strong><br>Bachelor of Science in Information Technology</div>
-                <div><strong>🛠️ 1+ year</strong><br>IT Support & Freelance</div>
+                <div><strong> Cum Laude</strong><br>Bachelor of Science in Information Technology</div>
+                <!-- <div><strong> 1+ year</strong><br>IT Support & Freelance</div> -->
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section-white" id="skillsSection">
+    <!-- SERVICES SECTION -->
+    <section class="section-white" id="servicesSection">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-keyboard"></i></div>
+                    <h3>Encoder / Typing</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-tachometer-alt"></i> 40+ WPM Typing Speed</li>
+                        <li><i class="fas fa-file-alt"></i> Data Entry & Transcription</li>
+                        <li><i class="fas fa-check-double"></i> High Accuracy Rate</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-globe"></i> Custom Websites</li>
+                        <li><i class="fas fa-database"></i> Full-Stack Applications</li>
+                        <li><i class="fab fa-react"></i> HTML/CSS/JS/PHP</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>IT Assistance & Setup</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-download"></i> Software Installation & Setup</li>
+                        <li><i class="fas fa-bug"></i> Basic Troubleshooting</li>
+                        <li><i class="fas fa-gauge-high"></i> PC Optimization & Cleanup</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Basic Networking</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-wifi"></i> Home Router Setup</li>
+                        <li><i class="fas fa-signal"></i> Internet Troubleshooting</li>
+                        <li><i class="fas fa-plug"></i> Device Connection Setup</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h3>IT Support</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-laptop"></i> Remote Troubleshooting</li>
+                        <li><i class="fas fa-building"></i> Onsite Support Available</li>
+                        <li><i class="fas fa-print"></i> Printer & Peripheral Setup</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Personal Hardware Repair</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-desktop"></i> Desktop & Laptop Repair</li>
+                        <li><i class="fas fa-memory"></i> RAM / SSD Upgrades</li>
+                        <li><i class="fas fa-fan"></i> Fan & Cooling Fix</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section-light" id="skillsSection">
         <div class="container reveal">
-            <h2>🛠️ Technical Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-html5"></i></span>HTML</span></span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-css3-alt"></i></span>CSS</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-js"></i></span>JavaScript</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-php"></i></span> PHP</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-solid fa-database"></i></i></span> MySQL</span>
-                
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-microchip"></i></span> Hardware Troubleshooting</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-print"></i></span> Printer Maintenance</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-windows"></i></span> Windows</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fab fa-linux"></i></span> Linux (Basic)</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-desktop"></i></span> System Setup</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-solid fa-wifi"></i></span> Remote Setup</span>
-                
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-solid fa-camera"></i></span> Photography</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-solid fa-image"></i></span> Photo Editing</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-solid fa-video"></i></span> Video Editing</span>
+            <h2>Technical Skills</h2>
+            <div class="skills-categories">
 
-                <span class="skill-tag"><span class="skill-logo"><i class="fa-brands fa-figma"></i></span> Figma</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-file-word"></i></span>Microsoft Word</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-file-powerpoint"></i></span>Microsoft PowerPoint</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-file-excel"></i></span> Microsoft Excel</span>
-                
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-language"></i></i></span> English</span>
-                <span class="skill-tag"><span class="skill-logo"><i class="fas fa-language"></i></i></span> Tagalog</span>
-    
+                <!-- Programming & Web -->
+                <div>
+                    <div class="skill-category-label">Programming & Web</div>
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box html">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">HTML</div>
+                        </div>
+
+                        <div class="skill-box css">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">CSS</div>
+                        </div>
+
+                        <div class="skill-box js">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">JavaScript</div>
+                        </div>
+
+                        <div class="skill-box php">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">PHP</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">MySQL</div>
+                        </div>
+
+                        <div class="skill-box python">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Python</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">C++</div>
+                        </div>
+
+                        <div class="skill-box java">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Java</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">VB.NET</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- IT & Systems -->
+                <div>
+                    <div class="skill-category-label">IT & Systems</div>
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                             <img src="https://cdn-icons-png.flaticon.com/512/11494/11494033.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">I.T. Support</div>
+                        </div>
+     
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3067/3067513.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">System Setup</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                               <img src="https://cdn-icons-png.flaticon.com/512/7655/7655685.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Remote Setup</div>
+                        </div>
+
+                        <div class="skill-box windows">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Windows</div>
+                        </div>
+
+                        <div class="skill-box linux">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Linux</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Creative & Productivity -->
+                <div>
+                    <div class="skill-category-label">Creative & Productivity</div>
+                    <div class="skills-box-grid">
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/461/461823.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Photography</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/6316/6316109.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Photo Editing</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/6979/6979672.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Video Editing</div>
+                        </div>
+
+                        <div class="skill-box figma">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Figma</div>
+                        </div>
+
+                    <div class="skill-box">
+                        <div class="skill-box-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888883.png" class="skill-logo">
+                        </div>
+                        <div class="skill-box-name">Word</div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-box-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888874.png" class="skill-logo">
+                        </div>
+                        <div class="skill-box-name">PowerPoint</div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-box-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="skill-logo">
+                        </div>
+                        <div class="skill-box-name">Excel</div>
+                    </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- TODO -->
-    <!-- PROJECTS || THESE ARE JUST PLACE HOLDERS --> 
+    <!-- PROJECTS SECTION  -->
     <section class="section-white" id="projectsSection">
         <div class="container reveal">
-            <h2>🚀 Projects</h2>
+            <h2> Projects</h2>
+            
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img"><img src="https://picsum.photos/id/24/400/200" alt="Health System"></div>
-                    <div class="project-content">
-                        <h3>Health Management System</h3>
-                        <div class="project-problem"><strong>Problem:</strong> Paper records & missed appointments.</div>
-                        <div class="project-solution"><strong>✅ Solution:</strong> Digital platform for scheduling & reports.</div>
-                        <div class="project-learned"><strong>📖 Learned:</strong> PHP/MySQL, role-based auth.</div>
-                        <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a> <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div>
+
+                <!-- PROJECT 1  -->
+                <div class="card-scene">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-thumb">
+                                <img class="photo-placeholder" src="imgs/project1.png" alt="Health Management System">
+                            </div>
+                            <div class="card-bottom">
+                                <span class="card-badge"><i class="fas fa-trophy"></i> Capstone — Team Lead</span>
+                                <h3>Health Management Information System</h3>
+                                <div class="card-hint"><i class="fas fa-mouse-pointer"></i> March 2024 - October 2025</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div><p class="back-label"><i class="fas fa-tag"></i> Type</p><p class="back-value"><strong>Team Leader & Lead Developer</strong> — Capstone</p></div>
+                            <div class="divider"></div>
+                            <div>
+                                <p class="back-label">
+                                    <i class="fas fa-info-circle"></i> Description
+                                </p>
+                                <p class="back-value">
+                                    Built a healthcare management system with appointment scheduling, patient records, report generation, and queue management to streamline clinic operations.
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div>
+                                <p class="back-label"><i class="fas fa-code"></i> Stack</p>
+                                <div class="stack-pills">
+                                    <span class="pill"><i class="fab fa-html5"></i> HTML5</span>
+                                    <span class="pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                                    <span class="pill"><i class="fab fa-js"></i> JavaScript</span>
+                                    <span class="pill"><i class="fab fa-php"></i> PHP</span>
+                                    <span class="pill"><i class="fas fa-database"></i> MySQL</span>
+                                </div>
+                            </div>
+                            <!-- <div class="card-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div> -->
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img"><img src="https://picsum.photos/id/0/400/200" alt="Help Desk"></div>
-                    <div class="project-content">
-                        <h3>Help Desk Ticketing UI</h3>
-                        <div class="project-problem"><strong>Problem:</strong> Lost IT requests via email.</div>
-                        <div class="project-solution"><strong>Solution:</strong> Dashboard with ticket tracking.</div>
-                        <div class="project-learned"><strong>Learned:</strong> React, mock API, responsive design.</div>
-                        <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a> <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div>
+
+                <!-- PROJECT 2 -->
+                <div class="card-scene">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-thumb">
+                                <img class="photo-placeholder" src="imgs/project2.png" alt="eVoting System">
+                            </div>
+                            <div class="card-bottom">
+                                <span class="card-badge"><i class="fas fa-users"></i> Collaborative</span>
+                                <h3>eVoting System</h3>
+                                <div class="card-hint"><i class="fas fa-mouse-pointer"></i> October 2024- November 2024</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                                <p class="back-value">
+                                    Team Project — <strong>QA Tester & Bug Fix Contributor</strong>
+                                </p>
+                                <div class="divider"></div>
+                                <div>
+                                <p class="back-label">
+                                    <i class="fas fa-info-circle"></i> Description
+                                </p>
+                                <p class="back-value">
+                                    Performed end-to-end testing, identified and reported bugs, and helped refine election system logic for improved accuracy and reliability.
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div><p class="back-label"><i class="fas fa-code"></i> Stack</p><div class="stack-pills">
+                                <span class="pill"><i class="fab fa-windows"></i> VB.NET</span>
+                                <span class="pill"><i class="fas fa-database"></i> MySQL</span></div></div>
+                            <!-- <div class="card-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div> -->
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img"><img src="https://picsum.photos/id/30/400/200" alt="eSports Hub"></div>
-                    <div class="project-content">
-                        <h3>eSports Tournament Hub</h3>
-                        <div class="project-problem"><strong>Problem:</strong> Manual bracket chaos.</div>
-                        <div class="project-solution"><strong>Solution:</strong> Automated bracket generator.</div>
-                        <div class="project-learned"><strong>Learned:</strong> Node.js, WebSockets.</div>
-                        <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a> <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div>
+
+                <!-- PROJECT 3 -->
+                <div class="card-scene">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-thumb">
+                                <img class="photo-placeholder" src="imgs/project3.png" alt="School Portal">
+                            </div>
+                            <div class="card-bottom">
+                                <span class="card-badge"><i class="fas fa-graduation-cap"></i> Self-practice</span>
+                                <h3>School Portal</h3>
+                                <div class="card-hint"><i class="fas fa-mouse-pointer"></i> March 2024</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div><p class="back-label"><i class="fas fa-tag"></i> Type</p><p class="back-value">Self-Practice Project</p></div>
+                            <div class="divider"></div>
+                            <div><p class="back-label"><i class="fas fa-info-circle"></i> Description</p><p class="back-value">A modern landing portal for academic resource showcase.</p></div>
+                            <div class="divider"></div>
+                            <div><p class="back-label"><i class="fas fa-code"></i> Stack</p><div class="stack-pills">
+                                <span class="pill"><i class="fab fa-html5"></i> HTML5</span>
+                                <span class="pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span class="pill"><i class="fab fa-js"></i> JavaScript</span></div></div>
+                            <!-- <div class="card-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a></div> -->
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-  <!-- EXPERIENCE SECTION -->
+    <!-- EXPERIENCE SECTION -->
     <section class="section-light" id="expSection">
         <div class="container reveal">
-            <h2>Professional Experience</h2>
-            
+            <h2>Experience</h2>
+            <div class="exp-item">
+                <div class="exp-img"><img src="imgs/logo_MunBin.png" alt="IT Intern" style="width:100%; height:100%; object-fit:cover; border-radius:28px;"></div>
+                <div class="exp-details">
+                    <div class="exp-title">IT Intern (On-the-Job Training)</div>
+                    <div class="exp-date">Municipality of Binangonan, Rizal | Nov 2025 – Mar 2026</div>
+                    <ul><li>Level 1 tech support for computers, printers & peripherals</li><li>Diagnosed hardware, printing, and network connectivity issues</li><li>Installed Windows OS, Microsoft Office, and staff support</li></ul>
+                </div>
+            </div>
+  
             <div class="exp-item">
                 <div class="exp-img">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=150&h=150&fit=crop" 
-                        alt="IT Support" 
-                        style="width:100%; height:100%; object-fit:cover; border-radius:28px;">
+                         alt="Freelance Web Developer" 
+                         style="width:100%; height:100%; object-fit:cover; border-radius:28px;">
                 </div>
 
                 <div class="exp-details">
-                    <div class="exp-title">L1 IT Infrastructure Support Engineer (Freelance)</div>
-                    <div class="exp-date">Self-Employed | April 2026 – Present</div>
-
+                    <div class="exp-title">Freelance Web Developer (Peer-to-Peer)</div>
+                    <div class="exp-date">Independent | August 2024 – Present</div>
                     <ul>
-                        <li>Provide remote IT support and troubleshoot system, network, and hardware issues.</li>
-                        <li>Monitor systems and respond to incidents and user requests.</li>
-                        <li>Manage user accounts, access permissions, and password resets.</li>
-                        <li>Perform routine maintenance and document resolutions.</li>
+                        <li>Assisted classmates with website development and troubleshooting</li>
+                        <li>Fixed layout issues, broken elements, and responsiveness using HTML & CSS</li>
+                        <li>Improved UI structure and ensured mobile-friendly design</li>
+                        <li>Debugged and optimized simple front-end code for better performance</li>
                     </ul>
                 </div>
             </div>
-
             <div class="exp-item">
-                <div class="exp-img">
-                    <img src="imgs/logo_MunBin.png" alt="IT Intern" style="width:100%; height:100%; object-fit:cover; border-radius:28px;">
-                </div>
-                <div class="exp-details">
-                    <div class="exp-title">IT Intern (On-the-Job Training)</div>
-                    <div class="exp-date">Municipality of Binangonan, Binangonan, Rizal | Nov 2025 – Mar 2026</div>
-                    <ul>
-                        <li>Level 1 tech support for computers, printers & peripherals</li>
-                        <li>Diagnosed hardware, printing, and network connectivity issues</li>
-                        <li>Installed Windows OS, Microsoft Office, and staff support</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="exp-item">
-                <div class="exp-img">
-                    <img src="imgs/logo_YT.png" 
-                    alt="YouTube Editing"
-                    style="width:100%; height:100%; object-fit:cover; border-radius:28px;">
-                </div>
-
+                <div class="exp-img"><img src="imgs/logo_YT.png" alt="YouTube Editing" style="width:100%; height:100%; object-fit:cover; border-radius:28px;"></div>
                 <div class="exp-details">
                     <div class="exp-title">YouTube Video Editor & Thumbnail Designer</div>
                     <div class="exp-date">Personal / Family Channel | May 2022 – July 2024</div>
-
                     <ul>
-                        <li>Edited YouTube videos including trimming, transitions, audio balancing, and basic effects</li>
-                        <li>Designed custom thumbnails to improve video presentation and viewer engagement</li>
+                        <li>Edited YouTube videos including trimming, transitions, audio balancing</li>
+                        <li>Designed custom thumbnails to improve video presentation</li>
                         <li>Optimized videos for YouTube upload and playback performance</li>
-                        <li> <a href="https://www.youtube.com/@rosdev" target="_blank" class="exp-link"> View Channel :) </a></li>
-                    </ul>
+                        <li><a href="https://www.youtube.com/@rosdev" target="_blank" rel="noopener noreferrer">
+                            View YT Channel :)</a></li>
+                </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -230,58 +515,23 @@
     <!-- TRAINING -->
     <section class="section-white" id="trainingSection">
         <div class="container reveal">
-            <h2>📚 Seminars & Trainings</h2>
-
+            <h2> Seminars </h2>
             <div class="training-list">
-
-                <!-- University of Rizal System -->
-                <span class="training-badge">
-                    <i class="fas fa-drafting-compass"></i>
-                    Elevating Wireframing Development – Prototype System Design
-                    <small>(University of Rizal System – Sept 27, 2024)</small>
-                </span>
-
-                <!-- Binangonan Catholic College -->
-                <span class="training-badge">
-                    <i class="fab fa-php"></i>
-                    Introduction to PHP: Hypertext Preprocessor
-                    <small>(Binangonan Catholic College – Nov 25, 2022)</small>
-                </span>
-
-                <span class="training-badge">
-                    <i class="fas fa-code"></i>
-                    Sublime Text: MiniHTML Reference
-                    <small>(Binangonan Catholic College – Nov 11, 2022)</small>
-                </span>
-
-                <span class="training-badge">
-                    <i class="fas fa-chart-bar"></i>
-                    Data Visualization Fundamentals
-                    <small>(Binangonan Catholic College – Nov 11, 2022)</small>
-                </span>
-
-                <span class="training-badge">
-                    <i class="fas fa-paintbrush"></i>
-                    Introduction to UX/UI using Adobe XD
-                    <small>(Binangonan Catholic College – Nov 11, 2022)</small>
-                </span>
-
-                <span class="training-badge">
-                    <i class="fas fa-mobile-alt"></i>
-                    Introduction to Android Studio
-                    <small>(Binangonan Catholic College – Nov 25, 2022)</small>
-                </span>
-
+                <span class="training-badge"><i class="fas fa-certificate"></i> How To Grow and Level-Up Your Career with I.T. Certifications <small>(Tech Academy - April 24, 2026)</small></span>
+                <span class="training-badge"><i class="fas fa-drafting-compass"></i> Elevating Wireframing Development <small>(University of Binangonan (Binangonan Campus) – Sept 27, 2024)</small></span>
+                <span class="training-badge"><i class="fab fa-php"></i> Introduction to PHP <small>(Binangonan Catholic College – Nov 25, 2022)</small></span>
+                <span class="training-badge"><i class="fa-brands fa-android"></i> Introduction to Android Studio <small>(Binangonan Catholic College – Nov 25, 2022)</small></span>
+                <span class="training-badge"><i class="fas fa-code"></i> Sublime Text: MiniHTML Reference <small>(Binangonan Catholic College – Nov 11, 2022)</small></span>
+                <span class="training-badge"><i class="fas fa-chart-bar"></i> Data Visualization Fundamentals <small>(Binangonan Catholic College – Nov 11, 2022)</small></span>
+                <span class="training-badge"><i class="fas fa-paintbrush"></i> Introduction to UX/UI using Adobe XD <small>(Binangonan Catholic College – Nov 11, 2022)</small></span>
             </div>
         </div>
     </section>
 
-    <!-- TODO: ADD SECTION FOR SERVICES  -->
-
     <!-- GALLERY -->
     <section class="section-light" id="gallerySection">
         <div class="container reveal">
-            <h2>📸 Gallery / Moments</h2>
+            <h2>Gallery</h2>
             <div class="leadership-gallery">
                 <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall1.jpg" alt="Capstone Award"></div><div class="gallery-caption">Capstone Defended - March 2025</div></div>
                 <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall2.jpg" alt="eSports"></div><div class="gallery-caption">Capstone Defense - March 2025</div></div>
@@ -298,14 +548,14 @@
     <!-- CONTACT + FOOTER -->
     <section class="section-white" id="contactSection">
         <div class="container reveal">
-            <h2>📬 Contact Me</h2>
+            <h2>Contact Me</h2>
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-detail"><a href="mailto:dvcarolinalee@gmail.com"><i class="fas fa-envelope"></i> dvcarolinalee@gmail.com</a></div>
-                    <div class="contact-detail"><a href=""><i class="fas fa-phone"></i> +63 947 794 2515</a></div>
-                    <div class="contact-detail"><a href="https://maps.app.goo.gl/1xfAaVTLTUi5YWzz7" target="_blank"><i class="fas fa-map-marker-alt"></i> Binangonan, Rizal</a></div>
-                    <div class="contact-detail"><a href="https://github.com/rolcalee" target="_blank"><i class="fab fa-github" target="_blank"></i> github.com/rolcalee</a></div>
-                    <div class="contact-detail"><a href="https://www.linkedin.com/in/carol-de-vicente/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/carol-de-vicente</a></div>
+                    <div class="contact-detail"><a href="tel:+639477942515"><i class="fas fa-phone"></i> +63 947 794 2515 </a></div>
+                    <div class="contact-detail"><a href="https://maps.app.goo.gl/SjF5196DmSTNTJJAA" target="_blank"><i class="fas fa-map-marker-alt"></i> Binangonan, Rizal, Philippines</a></div>
+                    <div class="contact-detail"><a href="https://github.com/rolcalee" target="_blank"><i class="fab fa-github"></i> github.com/rolcalee</a></div>
+                    <div class="contact-detail"><a href="https://www.linkedin.com/in/carol-de-vicente/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/carol-de-vicente/</a></div>
                     <div style="margin-top:1.5rem"><button id="downloadCVBtn2" class="btn-cv"><i class="fas fa-file-pdf"></i> Download CV (PDF)</button></div>
                 </div>
                 <div class="contact-form">
@@ -316,12 +566,11 @@
                     <p id="formFeedback" style="font-size:0.85rem; margin-top:0.5rem;"></p>
                 </div>
             </div>
-            <div class="contact-footer">
-                <p>© 2026 C.L. — Made with Love!</p>
-            </div>
+            <div class="contact-footer"><p>© 2026 C.L. — Made with Love!</p></div>
         </div>
     </section>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

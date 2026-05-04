@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>C.L. | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FIXED: Correct Font Awesome version -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Clash+Display:wght@400;500;600;700&family=Sentient:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -72,7 +71,20 @@
             <div class="hero-badge"> Passionate Learner </div>
             <h1>Carolina Lee V. De Vicente</h1>
             <p class="subhead" style="margin: 0.8rem 0 1rem;">IT Support Specialist | Junior Developer</p>
-            <p style="font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> Binangonan, Rizal, Philippines || <i class="fas fa-envelope"></i> dvcarolinalee@gmail.com </p>
+           <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Binangonan, Rizal, Philippines</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dvcarolinalee@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+63 947 794 2515 </span>
+                </div>
+            </div>
             <div class="btn-group">
                 <a href="#contactSection" class="btn-primary">Contact Me</a>
                 <a href="#projectsSection" class="btn-outline">View Projects</a>
@@ -159,27 +171,29 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Personal Hardware Repair</h3>
+                    <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+                    <h3>Photography & Videography</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-desktop"></i> Desktop & Laptop Repair</li>
-                        <li><i class="fas fa-memory"></i> RAM / SSD Upgrades</li>
-                        <li><i class="fas fa-fan"></i> Fan & Cooling Fix</li>
+                        <li><i class="fas fa-camera"></i> Creative Photography</li>
+                        <li><i class="fas fa-video"></i> Cinematic Videography</li>
+                        <li><i class="fas fa-photo-film"></i> Photo & Video Editing</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SKILLS SECTION  -->
     <section class="section-light" id="skillsSection">
         <div class="container reveal">
             <h2>Technical Skills</h2>
+
             <div class="skills-categories">
 
-                <!-- Programming & Web -->
+                <!-- Programming Languages -->
                 <div>
-                    <div class="skill-category-label">Programming & Web</div>
+                    <div class="skill-category-label">Programming Languages</div>
+
                     <div class="skills-box-grid">
 
                         <div class="skill-box html">
@@ -210,13 +224,6 @@
                             <div class="skill-box-name">PHP</div>
                         </div>
 
-                        <div class="skill-box">
-                            <div class="skill-box-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo">
-                            </div>
-                            <div class="skill-box-name">MySQL</div>
-                        </div>
-
                         <div class="skill-box python">
                             <div class="skill-box-icon">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo">
@@ -240,9 +247,143 @@
 
                         <div class="skill-box">
                             <div class="skill-box-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" class="skill-logo">
+                                <img src="imgs/vbnet.png" class="skill-logo">
                             </div>
                             <div class="skill-box-name">VB.NET</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div>
+                    <div class="skill-category-label">Frontend Development</div>
+
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Tailwind CSS</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Bootstrap</div>
+                        </div>
+
+                        <div class="skill-box figma">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Figma</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div>
+                    <div class="skill-category-label">Backend Development</div>
+
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Laravel</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Node.js</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">MySQL</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Software & Tools -->
+                <div>
+                    <div class="skill-category-label">Software & Tools</div>
+
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">VS Code</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Visual Studio</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="imgs/canva.jpg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Canva</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="imgs/capcut.png" alt="CapCut Logo" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">CapCut</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="imgs/vsdc.jpg" alt="VSDC Logo" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">VSDC</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div>
+                    <div class="skill-category-label">AI Tools</div>
+
+                    <div class="skills-box-grid">
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">ChatGPT</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">Claude</div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">
+                                <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png" class="skill-logo">
+                            </div>
+                            <div class="skill-box-name">DeepSeek</div>
                         </div>
 
                     </div>
@@ -251,15 +392,16 @@
                 <!-- IT & Systems -->
                 <div>
                     <div class="skill-category-label">IT & Systems</div>
+
                     <div class="skills-box-grid">
 
                         <div class="skill-box">
                             <div class="skill-box-icon">
-                             <img src="https://cdn-icons-png.flaticon.com/512/11494/11494033.png" class="skill-logo">
+                                <img src="https://cdn-icons-png.flaticon.com/512/11494/11494033.png" class="skill-logo">
                             </div>
                             <div class="skill-box-name">I.T. Support</div>
                         </div>
-     
+
                         <div class="skill-box">
                             <div class="skill-box-icon">
                                 <img src="https://cdn-icons-png.flaticon.com/512/3067/3067513.png" class="skill-logo">
@@ -269,7 +411,7 @@
 
                         <div class="skill-box">
                             <div class="skill-box-icon">
-                               <img src="https://cdn-icons-png.flaticon.com/512/7655/7655685.png" class="skill-logo">
+                                <img src="https://cdn-icons-png.flaticon.com/512/7655/7655685.png" class="skill-logo">
                             </div>
                             <div class="skill-box-name">Remote Setup</div>
                         </div>
@@ -291,10 +433,12 @@
                     </div>
                 </div>
 
-                <!-- Creative & Productivity -->
+                <!-- Creative -->
                 <div>
-                    <div class="skill-category-label">Creative & Productivity</div>
+                    <div class="skill-category-label">Creative Skills</div>
+
                     <div class="skills-box-grid">
+
                         <div class="skill-box">
                             <div class="skill-box-icon">
                                 <img src="https://cdn-icons-png.flaticon.com/512/461/461823.png" class="skill-logo">
@@ -315,34 +459,6 @@
                             </div>
                             <div class="skill-box-name">Video Editing</div>
                         </div>
-
-                        <div class="skill-box figma">
-                            <div class="skill-box-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-logo">
-                            </div>
-                            <div class="skill-box-name">Figma</div>
-                        </div>
-
-                    <div class="skill-box">
-                        <div class="skill-box-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888883.png" class="skill-logo">
-                        </div>
-                        <div class="skill-box-name">Word</div>
-                    </div>
-
-                    <div class="skill-box">
-                        <div class="skill-box-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888874.png" class="skill-logo">
-                        </div>
-                        <div class="skill-box-name">PowerPoint</div>
-                    </div>
-
-                    <div class="skill-box">
-                        <div class="skill-box-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" class="skill-logo">
-                        </div>
-                        <div class="skill-box-name">Excel</div>
-                    </div>
 
                     </div>
                 </div>
@@ -379,7 +495,7 @@
                                     <i class="fas fa-info-circle"></i> Description
                                 </p>
                                 <p class="back-value">
-                                    Built a healthcare management system with appointment scheduling, patient records, report generation, and queue management to streamline clinic operations.
+                                    Built a HMIS with appointment scheduling, patient records, report generation, and queue management to streamline clinic operations.
                                 </p>
                             </div>
                             <div class="divider"></div>
@@ -442,7 +558,7 @@
                             </div>
                             <div class="card-bottom">
                                 <span class="card-badge"><i class="fas fa-graduation-cap"></i> Self-practice</span>
-                                <h3>School Portal</h3>
+                                <h3>School Page</h3>
                                 <div class="card-hint"><i class="fas fa-mouse-pointer"></i> March 2024</div>
                             </div>
                         </div>
@@ -472,12 +588,18 @@
                 <div class="exp-img"><img src="imgs/logo_MunBin.png" alt="IT Intern" style="width:100%; height:100%; object-fit:cover; border-radius:28px;"></div>
                 <div class="exp-details">
                     <div class="exp-title">IT Intern (On-the-Job Training)</div>
-                    <div class="exp-date">Municipality of Binangonan, Rizal | Nov 2025 – Mar 2026</div>
-                    <ul><li>Level 1 tech support for computers, printers & peripherals</li><li>Diagnosed hardware, printing, and network connectivity issues</li><li>Installed Windows OS, Microsoft Office, and staff support</li></ul>
+                    <div class="exp-date">Municipality of Binangonan, Binangonan, Rizal | Nov 2025 – Mar 2026</div>
+                    <ul>
+                        <li>Level 1 technical support for computers, printers & peripherals</li>
+                        <li>Diagnosed hardware, printing, and network connectivity issues</li>
+                        <li>Installed Windows OS, Microsoft Office, and staff support</li>
+                        <li><a href="https://drive.google.com/file/d/1ibB5seDQe8J5KLSTuanDwLyqzM7KOmT0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                            View My OJT Narrative Report :)</a></li>
+                    </ul>
                 </div>
             </div>
   
-            <div class="exp-item">
+            <!-- <div class="exp-item">
                 <div class="exp-img">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=150&h=150&fit=crop" 
                          alt="Freelance Web Developer" 
@@ -494,7 +616,8 @@
                         <li>Debugged and optimized simple front-end code for better performance</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
+
             <div class="exp-item">
                 <div class="exp-img"><img src="imgs/logo_YT.png" alt="YouTube Editing" style="width:100%; height:100%; object-fit:cover; border-radius:28px;"></div>
                 <div class="exp-details">
@@ -533,14 +656,14 @@
         <div class="container reveal">
             <h2>Gallery</h2>
             <div class="leadership-gallery">
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall1.jpg" alt="Capstone Award"></div><div class="gallery-caption">Capstone Defended - March 2025</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall2.jpg" alt="eSports"></div><div class="gallery-caption">Capstone Defense - March 2025</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall3.jpg" alt="IT Workshop"></div><div class="gallery-caption">Presenting Capstone Project - January 2025</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall4.jpg" alt="Photography"></div><div class="gallery-caption">Presenting Capstone Project - January 2025</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall5.jpg" alt="Capstone Award"></div><div class="gallery-caption">eSports Organizer - September 2024</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall6.jpg" alt="eSports"></div><div class="gallery-caption">eSports Support - February 2026</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall7.jpg" alt="IT Workshop"></div><div class="gallery-caption">Printer Maintenance | Internship - December 2025</div></div>
-                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall8.jpg" alt="Photography"></div><div class="gallery-caption">Laptop Maintenance | Internship - January 2026</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall1.jpg" alt="Capstone Defended"></div><div class="gallery-caption">Capstone Defended - March 2025</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall2.jpg" alt="Capstone Defense"></div><div class="gallery-caption">Capstone Defense - March 2025</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall3.jpg" alt="Presenting Capstone 1"></div><div class="gallery-caption">Presenting Capstone Project - January 2025</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall4.jpg" alt="Presenting Capstone 2"></div><div class="gallery-caption">Presenting Capstone Project - January 2025</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall5.jpg" alt="eSports 1"></div><div class="gallery-caption">eSports Organizer - September 2024</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall6.jpg" alt="eSports 2"></div><div class="gallery-caption">eSports Support - February 2026</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall7.jpg" alt="OJT 1"></div><div class="gallery-caption">Printer Maintenance | Internship - December 2025</div></div>
+                <div class="gallery-card"><div class="gallery-img"><img src="imgs/gall8.jpg" alt="OJT 2"></div><div class="gallery-caption">Laptop Maintenance | Internship - January 2026</div></div>
             </div>
         </div>
     </section>
@@ -571,6 +694,7 @@
     </section>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
